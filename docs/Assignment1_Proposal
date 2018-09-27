@@ -1,1 +1,43 @@
-To be updated.
+CS 411 A1: Software Engineering
+Section A2: Project Group 4:
+Shreenidhi Jayaram
+Jueru (Tiana) Jin
+Soo Hyeok Lee
+Jules Valentin Schenkel
+CS 411 Project Assignment 1: Pitches / Proposal
+Project Idea I: Event Package
+
+
+Problem: 
+People want to have fun and memorable experiences but it is hard to know about all events in your area and to come up with plans
+
+Solution: 
+Itinerary generator and curated list of upcoming experiences in your area 
+
+Description: 
+Use the user’s location and the date to create night/day plans for the user to choose from. We can use various restaurant and event API’s to create an itinerary for a fun night. Our main goal is to create a packaged event plan which includes a package of events including a meal (restaurant suggestion) and event (concert/activity) packaged based on the geolocation of suggested restaurant and event and time of the event (possible appointment time for restaurant; or if the restaurant is dinner-hour only or lunch-hour only restaurant etc & for event time + geolocation).
+
+Resources:
+Usable APIs:
+APIs:
+https://www.yelp.com/developers
+http://api.eventful.com/docs
+https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
+https://www.songkick.com/developer/upcoming-events-for-metro-area
+Google maps geolocation api : for calculating distances
+
+Project Idea II: One Stop Review
+
+
+Problem: 
+When people shop online, there are so many reviews/ratings of products from multiple sources and it’s hard to look at all of the ratings and opinions from one place. There are ratings but these are user-defined and don’t necessarily go off of the qualitative sentiment or  comments. 
+
+Solution: 
+One stop platform with multiple reviews + Sentiment Analyzer implemented on these reviews for a quick snapshot to assist buying decisions. 
+
+Description: 
+An easy to use all-in-one place guide for reviews of any kind : may it be for restaurants, electronics, hotels,etc.. This would make the shopping/buying experience so much easier and smoother for the buyer as they have a definitive one place guide for all the reviews they’d ever need to make a purchase or go somewhere. This product will pull reviews pertaining to a certain query from websites such as yelp,google,amazon reviews, glassdoor,etc..Also, given the fact that user defined quantitative ratings may not be precise, we perform sentiment analysis on the reviews to come up with a more  defined quantitative rating. 
+
+Resources:
+Python Data science libraries
+Glassdoor/Yelp/Ebay/Amazon APIs to fetch reviews 
