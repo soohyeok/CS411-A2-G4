@@ -5,19 +5,25 @@ Jueru (Tiana) Jin
 Soo Hyeok Lee
 Jules Valentin Schenkel
 
-UserStory 4:
-
+User Story 4:
 1. User searches for a planned experience
 
-User searches for a planned experience using a location, date, and time. Our time parameter will simply be “Day” or “Night”, allowing the user to search for experiences for the day and experiences for the night. 
+User searches for a planned experience using a location, date, and time.
+Our time parameter will simply be “Day” or “Night”, allowing the user to search for experiences
+for the day and experiences for the night. 
 
 2. User browses search results and filters through them
 
-After the user receives the results to their search, they can browse them and filter them based on price per person, reviews, and 21+ events. 
+After the user receives the results to their search, they can browse them and filter
+them based on price per person, reviews, and 21+ events. 
 
 3. User has found a planned experience and saves experience to profile
 
-User clicks their chosen experience and is prompted to log in. See Log in story. After user has logged in or signed up they can click “Save experience”, which will save their planned experience to their profile for future reference and sharing with friends.
+User clicks their chosen experience and is prompted to log in. See Log in story.
+After user has logged in or signed up they can click “Save experience”, which will save their
+planned experience to their profile for future reference and sharing with friends.
 
 4. User logs in/signs up 
-User logs in using their social media account. If user does not have an account, they can sign up using their social media account.
+User logs in using their social media account. If user does not have an account,
+they can sign up using their social media account.
+
