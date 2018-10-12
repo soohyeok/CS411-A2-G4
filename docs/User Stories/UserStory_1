@@ -1,1 +1,29 @@
-1
+CS 411 A1: Software Engineering
+Section A2: Project Group 4:
+Shreenidhi Jayaram
+Jueru (Tiana) Jin
+Soo Hyeok Lee
+Jules Valentin Schenkel
+
+User Story 1:
+
+As a user of the web, I want to search for a “what to do plan” of my first day in Seattle.
+I log in with the user name that I created two days ago.
+In the search bar, I type in Seattle.
+Voila~ 5 sightseeing places show up, along with 10 recommended restaurants nearby those places, from Italian to Chinese. 
+It’s quite reasonable that the web recommends Museum of Pop Culture rather than Pike Market on such a rainy day. 
+I choose 3 places among the 5 recommendations, and pick 2 restaurants. Then I click on the “Create my plan” button at the bottom of the page. 
+Boomboomboom…
+A detailed travel plan with transportation options/routes presents on the screen.
+I save this travel plan in my bookmarks, and name it “YoYo Seattle”
+During the day, I visit the Museum in the morning and have Chinese food for lunch. Somehow, I want to be more adventurous for dinner (i.e. not the burger I saved earlier).
+I open the “YoYo Seattle” in my bookmark again, and click on the edit button next to the “XXX famous burger”. Options are: delete this event, change to a new restaurant, blahblahblah.
+I change the burger thing to a Ramen Burger place. 
+
+Engineer’s comment on the user story:
+Include a login page. (Maybe third party login? That’s too detail)
+Definitely there will be a search bar, key words are Locations
+Return results of sightseeing places and restaurants using APIs
+Have the option for user to make their combinations of the plan
+Store the plan (database)
+Enable user to edit the plan (query query query…)
