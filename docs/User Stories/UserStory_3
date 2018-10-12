@@ -1,1 +1,16 @@
+CS 411 A1: Software Engineering
+Section A2: Project Group 4:
+Shreenidhi Jayaram
+Jueru (Tiana) Jin
+Soo Hyeok Lee
+Jules Valentin Schenkel
 
+User Story 3: 
+The Green family is planning an afternoon out with their young kids, Mark and Stacy. Mark is 9 and Stacy is 7 so they are looking forward for some family-friendly entertainment options and a good place to eat out after. They are also on a budget so they are also looking for some affordable dining options. Mr.Green logs in to his account searches for planned experience  by first setting location as Denver,Colorado, the time of the event (day/night), day in his case. A variety of options are displayed → Denver Mountain Parks,Denver Botanic Gardens for under outdoors recreation options as well as 16 street mall and Kirkland museum of Art under other other entertainment. As Mr.Green, browses search results and filters through them, he narrows his options down to the Denver Mountain Parks. Since the first activity does not take up much of his allocated budget, this allows a higher restaurant budget for this family to accommodate. Mr.Green then chooses a good restaurant from the list and since he has found a planned experience, and saves experience to his profile. 
+
+Developer Aspect: 
+Login Page 
+Search bar to put in time and location
+Entertainment venues and restaurants show up depending on API called 
+Option to choose combination of plans 
+Store the plan
