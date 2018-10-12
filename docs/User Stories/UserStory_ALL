@@ -1,0 +1,99 @@
+CS 411 A1: Software Engineering
+Section A2: Project Group 4:
+Shreenidhi Jayaram
+Jueru (Tiana) Jin
+Soo Hyeok Lee
+Jules Valentin Schenkel
+
+User Story 1:
+
+As a user of the web, I want to search for a “what to do plan” of my first day in Seattle.
+I log in with the user name that I created two days ago.
+In the search bar, I type in Seattle.
+Voila~ 5 sightseeing places show up, along with 10 recommended restaurants nearby those places, from Italian to Chinese. 
+It’s quite reasonable that the web recommends Museum of Pop Culture rather than Pike Market on such a rainy day. 
+I choose 3 places among the 5 recommendations, and pick 2 restaurants. Then I click
+on the “Create my plan” button at the bottom of the page. 
+Boomboomboom…
+A detailed travel plan with transportation options/routes presents on the screen.
+I save this travel plan in my bookmarks, and name it “YoYo Seattle”
+During the day, I visit the Museum in the morning and have Chinese food for lunch.
+Somehow, I want to be more adventurous for dinner (i.e. not the burger I saved earlier).
+I open the “YoYo Seattle” in my bookmark again, and click on the edit button next to the
+“XXX famous burger”. Options are: delete this event, change to a new restaurant, blahblahblah.
+I change the burger thing to a Ramen Burger place. 
+
+Engineer’s comment on the user story:
+-Include a login page. (Maybe third party login? That’s too detail)
+-Definitely there will be a search bar, key words are Locations
+-Return results of sightseeing places and restaurants using APIs
+-Have the option for user to make their combinations of the plan
+-Store the plan (database)
+-Enable user to edit the plan (query query query…)
+
+ 
+User Story 2:
+Donald Trump (Age 22) Student At Boston University:
+As a student (low budget) who is planning to travel,
+Donald wants to see a list of options of events and restaurants to choose from for the day at the location he travels to.
+
+Scenario: Donald is a student at Boston University.
+He is planning to travel to New York in this upcoming weekend with his girlfriend.
+Their main interest is to eat but they want to see if they could coordinate
+any special activity in New York along with good food.
+They log on to the application using their social media accounts.
+Donald input New York and searches for events and restaurants to fit their schedule.
+Donald bookmarks the events and restaurants of his interest and shares them with his girlfriend using a social media.
+
+Developer Aspect:
+-Login Page required using OAuth/internally
+-Have a Search bar where the user could input location and date information
+-APIs for calling list of restaurants and events are needed
+-When searching for data from API, the date and location information have to be a criteria
+-The called up list must be accessible by a hyperlink for user to find more information on the restaurant/event
+-The restaurants and event information needs to be saved on to a database for the
+user to bookmark the events and restaurants of user’s interest
+-The bookmarked data must be presentable so that it could be read and shared with others
+
+User Story 3: 
+The Green family is planning an afternoon out with their young kids,
+Mark and Stacy. Mark is 9 and Stacy is 7 so they are looking forward for some family-friendly entertainment
+options and a good place to eat out after. They are also on a budget so they are also looking for some affordable
+dining options. Mr.Green logs in to his account searches for planned experience  by first setting location as Denver,Colorado,
+the time of the event (day/night), day in his case.
+A variety of options are displayed → Denver Mountain Parks,Denver Botanic Gardens for under outdoors recreation
+options as well as 16 street mall and Kirkland museum of Art under other other entertainment.
+As Mr.Green, browses search results and filters through them, he narrows his options down to the Denver Mountain Parks.
+Since the first activity does not take up much of his allocated budget, this allows a higher restaurant budget
+for this family to accommodate. Mr.Green then chooses a good restaurant from the list and since he has found
+a planned experience, and saves experience to his profile. 
+
+Developer Aspect: 
+-Login Page 
+-Search bar to put in time and location
+-Entertainment venues and restaurants show up depending on API called 
+-Option to choose combination of plans 
+-Store the plan
+
+User Story 4:
+1. User searches for a planned experience
+
+User searches for a planned experience using a location, date, and time.
+Our time parameter will simply be “Day” or “Night”, allowing the user to search for experiences
+for the day and experiences for the night. 
+
+2. User browses search results and filters through them
+
+After the user receives the results to their search, they can browse them and filter
+them based on price per person, reviews, and 21+ events. 
+
+3. User has found a planned experience and saves experience to profile
+
+User clicks their chosen experience and is prompted to log in. See Log in story.
+After user has logged in or signed up they can click “Save experience”, which will save their
+planned experience to their profile for future reference and sharing with friends.
+
+4. User logs in/signs up 
+User logs in using their social media account. If user does not have an account,
+they can sign up using their social media account.
+
