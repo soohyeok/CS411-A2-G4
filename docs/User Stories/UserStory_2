@@ -1,23 +1,29 @@
-
 CS 411 A1: Software Engineering
 Section A2: Project Group 4:
 Shreenidhi Jayaram
 Jueru (Tiana) Jin
 Soo Hyeok Lee
 Jules Valentin Schenkel
-
+ 
 User Story 2:
-
 Donald Trump (Age 22) Student At Boston University:
-As a student (low budget) who is planning to travel, Donald wants to see a list of options of events and restaurants to choose from for the day at the location he travels to.
+As a student (low budget) who is planning to travel,
+Donald wants to see a list of options of events and restaurants to choose from for the day at the location he travels to.
 
-Scenario: Donald is a student at Boston University. He is planning to travel to New York in this upcoming weekend with his girlfriend. Their main interest is to eat but they want to see if they could coordinate any special activity in New York along with good food. They log on to the application using their social media accounts. Donald input New York and searches for events and restaurants to fit their schedule. Donald bookmarks the events and restaurants of his interest and shares them with his girlfriend using a social media.
+Scenario: Donald is a student at Boston University.
+He is planning to travel to New York in this upcoming weekend with his girlfriend.
+Their main interest is to eat but they want to see if they could coordinate
+any special activity in New York along with good food.
+They log on to the application using their social media accounts.
+Donald input New York and searches for events and restaurants to fit their schedule.
+Donald bookmarks the events and restaurants of his interest and shares them with his girlfriend using a social media.
 
 Developer Aspect:
-Login Page required using OAuth/internally
-Have a Search bar where the user could input location and date information
-APIs for calling list of restaurants and events are needed
-When searching for data from API, the date and location information have to be a criteria
-The called up list must be accessible by a hyperlink for user to find more information on the restaurant/event
-The restaurants and event information needs to be saved on to a database for the user to bookmark the events and restaurants of user’s interest
-The bookmarked data must be presentable so that it could be read and shared with others
+-Login Page required using OAuth/internally
+-Have a Search bar where the user could input location and date information
+-APIs for calling list of restaurants and events are needed
+-When searching for data from API, the date and location information have to be a criteria
+-The called up list must be accessible by a hyperlink for user to find more information on the restaurant/event
+-The restaurants and event information needs to be saved on to a database for the
+user to bookmark the events and restaurants of user’s interest
+-The bookmarked data must be presentable so that it could be read and shared with others
