@@ -1,0 +1,31 @@
+{
+  "name": "findfun",
+  "private": false,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.55",
+    "bcrypt": "^3.0.1",
+    "meteor-node-stubs": "^0.4.1",
+    "moment": "^2.22.2",
+    "react": "^16.5.2",
+    "react-datepicker": "^1.6.0",
+    "react-dom": "^16.5.2",
+    "react-router": "^3.0.5",
+    "react-router-dom": "^4.3.1",
+    "semantic-ui-react": "^0.82.5",
+    "shortid": "^2.2.13",
+    "simpl-schema": "^1.5.3"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
