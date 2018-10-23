@@ -11,7 +11,7 @@ Meteor.methods({
       }
     }).validate({search});
     if (Meteor.isServer) {
-      const apiKey = '7Hj3DSg2DV8kCD7G7RBH2Z7cv0tU4Utu8Bt5rvvcuSV9U7k59lX0TGbUct0kSHhPnIauVCQTuAH6nTnFXWBGGFg_S-MCaxK068KNygW1SqOG0_vi1VqwX3KUYejJW3Yx';
+      const apiKey = Meteor.settings.private.YELP_API_KEY;
       const url = `https://api.yelp.com/v3/businesses/search`;
       const options = {
         params: {

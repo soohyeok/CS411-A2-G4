@@ -3,6 +3,8 @@
   "private": false,
   "scripts": {
     "start": "meteor run",
+    "development": "meteor --settings development.json",
+    "production": "meteor --settings production.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
