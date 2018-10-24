@@ -1,6 +1,8 @@
 # CS411-A2-G4
 
 Assignment1_Proposal is located within 'docs' directory
+Assignment2 Userstories are within a directory called 'User Stories' under 'docs' directory
+Assignment3_Prototype is located within 'docs' directory 
 
 How to Run app:  
 Clone repo and cd into folder and do the following:  
