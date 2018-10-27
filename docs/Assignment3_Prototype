@@ -1,0 +1,11 @@
+A document explaining why you chose the technology stack that you are
+demonstrating; I’d like to know if you considered other stacks, and the process you
+used to choose the stack for the prototype. The doc should be added to your ‘docs’
+folder on github.
+
+Our group decided on a javascript technology stack. We are using Meteor.js to handle our server code and data layer. 
+We are then using React.js to render html on the client. We chose this technology stack because it allows us to write the
+entire program in javascript, which is simple and convenient. We are using React.js because it is widely used and has a 
+great community. Meteor.js was chosen because it allows us to more easily create a reactive front-end experience and offers an 
+out of the box publication subscription data communication layer using Distributed Data Protocal. We considered the MERN stack 
+(Mongo Express React Node), but Meteor.js seemed like a cool framework that makes it easier to quickly prototype and iterate.
