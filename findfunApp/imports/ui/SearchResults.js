@@ -1,7 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
-export default class NotFound extends React.Component {
+import YelpList from './YelpList.js';
+
+export default class SearchResults extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
   render() {
     return (
       <section className="hero is-info is-fullheight">
@@ -24,13 +33,8 @@ export default class NotFound extends React.Component {
           </nav>
         </div>
         <div className="hero-body">
-          <div className="container has-text-centered">
-            <h1 className="title is-size-1">
-              Oops, you're in the wrong place
-            </h1>
-            <div className="column column-center align-items-center">
-              <Link to="/" className="button is-danger is-large">Go home</Link>
-            </div>
+          <div className="container">
+            <YelpList longitude={this.props.params.longitude} latitude={this.props.params.latitude} search={this.props.params.search} />
           </div>
         </div>
         <div className="hero-foot">

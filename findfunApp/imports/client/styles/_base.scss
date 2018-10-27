@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Modak|Roboto');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css');
+@import url('https://use.fontawesome.com/releases/v5.4.1/css/all.css');
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +8,4 @@
 
 html {
   font-size: 62.5%;
-}
-
-a {
-  text-decoration: none;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 100rem;
-}
-
-.tetatet-logo {
-  color: #EF5350;
-  font-family: 'Modak', cursive;
-  font-size: 3.4rem;
-  font-weight: 300;
-}
-
-.yelpListItem-image {
-  height: 10rem;
-  width: auto;
 }

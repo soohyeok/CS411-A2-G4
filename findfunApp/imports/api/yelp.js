@@ -4,20 +4,26 @@ import SimpleSchema from 'simpl-schema';
 
 Meteor.methods({
   //method to call api and get daily schedule data
-  getYelpData(search) {
+  getYelpData(longitude, latitude, search) {
     new SimpleSchema({
+      longitude: {
+        type: String
+      },
+      latitude: {
+        type: String
+      },
       search: {
-        type: String,
+        type: String
       }
-    }).validate({search});
+    }).validate({longitude, latitude, search});
     if (Meteor.isServer) {
       const apiKey = Meteor.settings.private.YELP_API_KEY;
       const url = `https://api.yelp.com/v3/businesses/search`;
       const options = {
         params: {
           term: search,
-          latitude: 37.786882,
           longitude: -122.399972,
+          latitude: 37.786882,
           limit: 5
         },
         headers: {
