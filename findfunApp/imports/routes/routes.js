@@ -10,7 +10,7 @@ import NotFound from '../ui/NotFound.js';
 export const routes = (
   <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={LandingPage} />
-    <Route path="/s/:longitude/:latitude/:search" component={SearchResults} />
+    <Route path="/s/:city/:time" component={SearchResults} />
     <Route path="*" component={NotFound} />
   </Router>
 );

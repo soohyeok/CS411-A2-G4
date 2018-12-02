@@ -14,12 +14,12 @@ export default class YelpList extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.search) {
-      Meteor.call('getYelpData', this.props.longitude, this.props.latitude, this.props.search, (err, res) => {
+    if (this.props.city && this.props.time) {
+      Meteor.call('getYelpResults', this.props.city, this.props.time, (err, res) => {
         if (err) {
-          console.log('getYelpData err: ', err);
+          console.log('getYelpResults err: ', err);
         } else {
-          // console.log('getYelpData res: ', res);
+          console.log('getYelpResults res: ', res);
           // save yelp data response to state
           this.setState({ yelpList: res });
         }
@@ -40,7 +40,10 @@ export default class YelpList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="column">
+        <div className="box">
+          <h3 className="title is-3 has-text-grey-dark">Food</h3>
+        </div>
         {this.renderYelpListItems()}
       </div>
     );

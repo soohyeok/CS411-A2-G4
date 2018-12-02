@@ -6,7 +6,8 @@ export default class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: '',
+      error: '',
+      city: '',
       time: 'day'
     };
 
@@ -17,15 +18,15 @@ export default class LandingPage extends React.Component {
     e.preventDefault();
 
     // get value of input field
-    const search = this.state.search.trim();
+    const city = this.state.city.trim();
 
     // make sure input is not empty
-    if (search.length === 0) {
-      return this.setState({error: 'Please enter your search.'});
+    if (city.length === 0) {
+      return this.setState({error: 'Please enter a city.'});
     }
 
-    // go to new url with search parameters in url (push to history stack so that back button works)
-    browserHistory.push(`/s/-122.399972/37.786882/${search}`);
+    // go to new url with city parameters in url (push to history stack so that back button works)
+    browserHistory.push(`/s/${city}/${this.state.time}`);
   }
 
   handleChange(event) {
@@ -95,11 +96,12 @@ export default class LandingPage extends React.Component {
                 </div>
                 <div className="field">
                   <p className="control has-icons-left">
-                    <input className="input is-large" name="search" type="text" value={this.state.search} onChange={this.handleChange} />
+                    <input className="input is-large" placeholder="Boston" name="city" type="text" value={this.state.city} onChange={this.handleChange} />
                     <span className="icon is-small is-left">
-                      <i className="fas fa-search"></i>
+                      <i className="fas fa-location-arrow"></i>
                     </span>
                   </p>
+                  {this.state.error ? <p className="help is-danger">{this.state.error}</p> : undefined}
                 </div>
                 <div className="field">
                   <div className="control">
