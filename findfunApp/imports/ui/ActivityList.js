@@ -32,7 +32,7 @@ export default class ActivityList extends React.Component {
       // iterate through this.state.yelpList and render child component for each element
       return this.state.activityList.map((activityListItem) => {
         return (
-          <ActivityListItem key={activityListItem.id} activityListItem={activityListItem} />
+          <ActivityListItem key={activityListItem.id} activityListItem={activityListItem} city={this.props.city} time={this.props.time} />
         );
       });
     }

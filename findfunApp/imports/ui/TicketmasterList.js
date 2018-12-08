@@ -32,7 +32,7 @@ export default class TicketmasterList extends React.Component {
       // iterate through this.state.ticketmasterList and render child component for each element
       return this.state.ticketmasterList.map((ticketmasterListItem) => {
         return (
-          <TicketmasterListItem key={ticketmasterListItem.id} ticketmasterListItem={ticketmasterListItem} />
+          <TicketmasterListItem key={ticketmasterListItem.id} ticketmasterListItem={ticketmasterListItem} city={this.props.city} time={this.props.time} />
         );
       });
     }

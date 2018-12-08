@@ -36,12 +36,6 @@ export default class NotFound extends React.Component {
         <div className="hero-foot">
           <nav className="tabs">
             <div className="container">
-              <ul>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-                <li><a>Privacy Policy</a></li>
-                <li><a>Terms of Use</a></li>
-              </ul>
             </div>
           </nav>
         </div>

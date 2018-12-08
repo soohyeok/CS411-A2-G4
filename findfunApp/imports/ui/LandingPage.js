@@ -1,6 +1,7 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
 import { Link, browserHistory } from 'react-router';
+
+import Navbar from './Navbar.js';
 
 export default class LandingPage extends React.Component {
   constructor(props) {
@@ -42,38 +43,7 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <section className="hero is-info is-fullheight">
-        <div className="hero-head">
-          <nav className="navbar">
-            <div className="container">
-              <div className="navbar-brand">
-                <Link to="/" className="navbar-item is-size-3">
-                  <span className="icon is-medium">
-                    <i className="fas fa-map-pin"></i>
-                  </span>
-                  <span>Funtimes</span>
-                </Link>
-                <span className="navbar-burger burger" data-target="navbarMenuHero">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div id="navbarMenuHero" className="navbar-menu">
-                <div className="navbar-end">
-                  <span className="navbar-item">
-                    <a className="button is-success is-medium">
-                      <span>Sign Up</span>
-                    </a>
-                  </span>
-                  <span className="navbar-item">
-                    <a className="button is-medium">
-                      <span>Log In</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
+        <Navbar />
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 className="title is-size-1">
@@ -115,12 +85,6 @@ export default class LandingPage extends React.Component {
         <div className="hero-foot">
           <nav className="tabs">
             <div className="container">
-              <ul>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-                <li><a>Privacy Policy</a></li>
-                <li><a>Terms of Use</a></li>
-              </ul>
             </div>
           </nav>
         </div>

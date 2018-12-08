@@ -32,7 +32,7 @@ export default class YelpList extends React.Component {
       // iterate through this.state.yelpList and render child component for each element
       return this.state.yelpList.map((yelpListItem) => {
         return (
-          <YelpListItem key={yelpListItem.id} yelpListItem={yelpListItem} />
+          <YelpListItem key={yelpListItem.id} yelpListItem={yelpListItem} city={this.props.city} time={this.props.time} />
         );
       });
     }
