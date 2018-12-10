@@ -13,6 +13,7 @@ export default class Navbar extends React.Component {
   }
 
   componentDidMount() {
+    // keep track of user's authentication status in navbar to show the correct navigation buttons
     this.isAuthenticatedTracker = Tracker.autorun(() => {
       const isAuthenticated = !!Meteor.userId();
       this.setState({ isAuthenticated });
@@ -20,9 +21,11 @@ export default class Navbar extends React.Component {
   }
 
   componentWillUnmount() {
+    // stop tracker
     this.isAuthenticatedTracker.stop();
   }
 
+  // render the appropriate navigation buttons based on authentication state 
   renderAccountButtons() {
     if (this.state.isAuthenticated) {
       return (

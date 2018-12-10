@@ -2,8 +2,18 @@ import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
 import SimpleSchema from 'simpl-schema';
 
+// DESCRIPTION:
+// server methods to be called from client to get data from API's
+
+// SECURITY:
+// all API keys are stored in environment variables than are set when the application is started
+// API keys are never stored in plain text in the app code
+//
+// All data received from the client is checked and cleaned using the SimpleSchema package
+
 Meteor.methods({
   getWeatherResults(city) {
+    // clean data received from client
     new SimpleSchema({
       city: {
         type: String
@@ -28,6 +38,9 @@ Meteor.methods({
         if (result.statusCode === 200) {
           const responseJson = JSON.parse(result.content);
           // console.log("weather responseJson: ", responseJson);
+
+          // weather response gives weather forecasts for every 3 hours for the next 5 days
+          // loop through the results and save one forecast for each day to get a forecast for the following 5 days
           let weatherList = [];
           let lastWeatherDayStored = '';
           responseJson.list.forEach((value) => {
@@ -49,6 +62,7 @@ Meteor.methods({
     }
   },
   getYelpResults(city, time) {
+    // clean data received from client
     new SimpleSchema({
       city: {
         type: String
@@ -92,6 +106,7 @@ Meteor.methods({
     }
   },
   getDayActivities(city, time) {
+    // clean data received from client
     new SimpleSchema({
       city: {
         type: String
@@ -119,10 +134,10 @@ Meteor.methods({
       try {
         // Synchronous GET Request
         const result = HTTP.get(url, options);
-        // console.log('getYelpData result: ', result);
+        // console.log('getDayActivities result: ', result);
         if (result.statusCode === 200) {
           const responseJson = JSON.parse(result.content);
-          // console.log('getActivitiesResults responseJson:', responseJson.businesses);
+          // console.log('getDayActivities responseJson:', responseJson.businesses);
           return responseJson.businesses;
         } else {
           // console.log("Response issue: ", result.statusCode);
@@ -130,11 +145,12 @@ Meteor.methods({
           throw new Meteor.Error(result.statusCode, errorJson.error);
         }
       } catch (error) {
-        console.log('getYelpData: error', error);
+        console.log('getDayActivities: error', error);
       }
     }
   },
   getTicketmasterResults(city, time) {
+    // clean data received from client
     new SimpleSchema({
       city: {
         type: String
@@ -160,7 +176,7 @@ Meteor.methods({
       try {
         // Synchronous GET Request
         const result = HTTP.get(url, options);
-        // console.log('getYelpData result: ', result);
+        // console.log('getTicketmasterResults result: ', result);
         if (result.statusCode === 200) {
           const responseJson = JSON.parse(result.content);
           // console.log('getTicketmasterResults responseJson:', responseJson);

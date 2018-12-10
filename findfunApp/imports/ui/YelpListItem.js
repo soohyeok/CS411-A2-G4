@@ -13,6 +13,7 @@ export default class YelpListItem extends React.Component {
     this.bookmarksInsert = this.bookmarksInsert.bind(this);
   }
 
+  // bookmark and save the food listing for user
   bookmarksInsert() {
     if (this.props.yelpListItem && this.props.city && this.props.time) {
       if (Meteor.userId()) {
@@ -45,8 +46,6 @@ export default class YelpListItem extends React.Component {
 
   render() {
     if (this.props.yelpListItem) {
-      // reference props to dislpay the desired information about business
-      // (have a look at console output to see what data exists)
       // console.log('yelpListItem: ', this.props.yelpListItem);
       return (
         <div className="card searchResult">

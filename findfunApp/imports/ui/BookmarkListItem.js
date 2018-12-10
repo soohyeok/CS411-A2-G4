@@ -8,6 +8,7 @@ export default class BookmarkListItem extends React.Component {
     this.bookmarksRemove = this.bookmarksRemove.bind(this);
   }
 
+  // delete bookmark from db for user
   bookmarksRemove() {
     Meteor.call('bookmarksRemove', this.props.bookmarkListItem._id, (err, res) => {
       if (err) {
@@ -20,8 +21,6 @@ export default class BookmarkListItem extends React.Component {
 
   render() {
     if (this.props.bookmarkListItem) {
-      // reference props to dislpay the desired information about business
-      // (have a look at console output to see what data exists)
       // console.log('bookmarkListItem: ', this.props.bookmarkListItem);
       return (
         <div className="card searchResult">

@@ -15,6 +15,7 @@ export default class LandingPage extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
   handleSubmit(e) {
     e.preventDefault();
 
@@ -30,6 +31,7 @@ export default class LandingPage extends React.Component {
     browserHistory.push(`/s/${city}/${this.state.time}`);
   }
 
+  // create controlled react component form using state 
   handleChange(event) {
     const target = event.target;
     const value = target.value;

@@ -15,21 +15,22 @@ export default class ActivityList extends React.Component {
 
   componentDidMount() {
     if (this.props.city && this.props.time) {
+      // get activities from server method (which calls Yelp API)
       Meteor.call('getDayActivities', this.props.city, this.props.time, (err, res) => {
         if (err) {
           console.log('getDayActivities err: ', err);
         } else {
           console.log('getDayActivities res: ', res);
-          // save yelp data response to state
+          // save response to state
           this.setState({ activityList: res });
         }
       });
     }
   }
 
+  // iterate through array of objects and render child component for each element
   renderActivityListItems() {
     if (this.state.activityList) {
-      // iterate through this.state.yelpList and render child component for each element
       return this.state.activityList.map((activityListItem) => {
         return (
           <ActivityListItem key={activityListItem.id} activityListItem={activityListItem} city={this.props.city} time={this.props.time} />

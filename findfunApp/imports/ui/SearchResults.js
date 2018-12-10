@@ -10,11 +10,9 @@ import WeatherList from './WeatherList.js';
 export default class SearchResults extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
   }
 
+  // render the appropriate data based on user's selection of 'day' or 'night'
   renderSearchResults() {
     const city = this.props.params.city;
     const time = this.props.params.time;

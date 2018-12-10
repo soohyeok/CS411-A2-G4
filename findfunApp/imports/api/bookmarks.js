@@ -24,7 +24,7 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    // clean input from client
+    // clean data received from client
     new SimpleSchema({
       city: {
         type: String
@@ -89,7 +89,7 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    // clean input from client
+    // clean data received from client
     new SimpleSchema({
       _id: {
         type: String

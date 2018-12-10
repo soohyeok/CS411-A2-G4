@@ -20,6 +20,8 @@ export default class Signup extends React.Component {
       loginStyle: 'popup'
     };
 
+    // trigger log in with facebook pop up
+    // after log in user will be redirected to search page with onAuthChange in client/main.js
     Meteor.loginWithFacebook(options, (err) => {
       if (err) {
         console.log('Facebook login error', err);

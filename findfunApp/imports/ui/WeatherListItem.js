@@ -6,6 +6,7 @@ export default class WeatherListItem extends React.Component {
     super(props);
   }
 
+  // convert the temperature from kelvin to fahrenheit and render the correct image based on the weather description
   renderWeatherDetails() {
     const celsius = this.props.weatherListItem.main.temp - 273.15;
     const fahrenheit = (celsius * 1.8) + 32;

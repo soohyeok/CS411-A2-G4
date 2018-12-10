@@ -19,12 +19,11 @@ export default class BookmarkList extends React.Component {
   }
 
   componentDidMount() {
+    // subscribe to user's bookmarks and save to state to be rendered
     this.bookmarklistTracker = Tracker.autorun(() => {
       Meteor.subscribe('bookmarks');
       const bookmarks = Bookmarks.find({userId: Meteor.userId()}).fetch();
       console.log('bookmarks: ', bookmarks);
-      // const food = bookmarks.filter(bookmark => bookmark.category === 'food');
-      // console.log()
       this.setState({
         bookmarks,
         activities: bookmarks.filter(bookmark => bookmark.category === 'activities'),
@@ -35,9 +34,11 @@ export default class BookmarkList extends React.Component {
   }
 
   componentWillUnmount() {
+    // stop tracker
     this.bookmarklistTracker.stop();
   }
 
+  // iterate through activities and render each in child component
   renderActivities() {
     if (this.state.bookmarks) {
       if (this.state.activities) {
@@ -48,6 +49,7 @@ export default class BookmarkList extends React.Component {
     }
   }
 
+  // iterate through entertainment and render each in child component
   renderEntertainment() {
     if (this.state.bookmarks) {
       if (this.state.entertainment) {
@@ -58,6 +60,7 @@ export default class BookmarkList extends React.Component {
     }
   }
 
+  // iterate through food and render each in child component
   renderFood() {
     if (this.state.bookmarks) {
       if (this.state.food) {

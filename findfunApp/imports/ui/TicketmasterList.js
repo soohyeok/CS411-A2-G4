@@ -15,6 +15,7 @@ export default class TicketmasterList extends React.Component {
 
   componentDidMount() {
     if (this.props.city && this.props.time) {
+      // get entertainment from server method (which calls Ticketmaster API)
       Meteor.call('getTicketmasterResults', this.props.city, this.props.time, (err, res) => {
         if (err) {
           console.log('getTicketmasterResults err: ', err);
@@ -29,7 +30,7 @@ export default class TicketmasterList extends React.Component {
 
   renderTicketmasterListItems() {
     if (this.state.ticketmasterList) {
-      // iterate through this.state.ticketmasterList and render child component for each element
+      // iterate through array of objects and render child component for each element
       return this.state.ticketmasterList.map((ticketmasterListItem) => {
         return (
           <TicketmasterListItem key={ticketmasterListItem.id} ticketmasterListItem={ticketmasterListItem} city={this.props.city} time={this.props.time} />

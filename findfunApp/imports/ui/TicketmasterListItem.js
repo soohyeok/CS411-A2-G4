@@ -13,6 +13,7 @@ export default class TicketmasterListItem extends React.Component {
     this.bookmarksInsert = this.bookmarksInsert.bind(this);
   }
 
+  // insert and save bookmark for user
   bookmarksInsert() {
     if (this.props.ticketmasterListItem && this.props.city && this.props.time) {
       if (Meteor.userId()) {
@@ -43,6 +44,8 @@ export default class TicketmasterListItem extends React.Component {
     }
   }
 
+  // ticketmaster provides a number of images with different aspect ratios with no predictable order
+  // find the '4_3' aspect ratio picture if it exists and render it
   renderConcertImage() {
     if (this.props.ticketmasterListItem) {
       let counter = 0;
@@ -63,8 +66,6 @@ export default class TicketmasterListItem extends React.Component {
 
   render() {
     if (this.props.ticketmasterListItem) {
-      // reference props to dislpay the desired information about business
-      // (have a look at console output to see what data exists)
       // console.log('ticketmasterListItem: ', this.props.ticketmasterListItem);
       return (
         <div className="card searchResult">

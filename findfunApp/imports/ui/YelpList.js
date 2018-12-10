@@ -15,6 +15,7 @@ export default class YelpList extends React.Component {
 
   componentDidMount() {
     if (this.props.city && this.props.time) {
+      // get food from server method (which calls Yelp API)
       Meteor.call('getYelpResults', this.props.city, this.props.time, (err, res) => {
         if (err) {
           console.log('getYelpResults err: ', err);
@@ -29,7 +30,7 @@ export default class YelpList extends React.Component {
 
   renderYelpListItems() {
     if (this.state.yelpList) {
-      // iterate through this.state.yelpList and render child component for each element
+      // iterate through array of objects and render child component for each element
       return this.state.yelpList.map((yelpListItem) => {
         return (
           <YelpListItem key={yelpListItem.id} yelpListItem={yelpListItem} city={this.props.city} time={this.props.time} />

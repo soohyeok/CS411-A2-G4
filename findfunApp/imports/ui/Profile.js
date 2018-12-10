@@ -13,7 +13,9 @@ export default class Profile extends React.Component {
       picture_url: ''
     }
   }
+
   componentDidMount() {
+    // get user's profile data from server (name, profile picture url)
     Meteor.call('getUserProfileData', (err, res) => {
       if (err) {
         console.log('getUserData error: ', err);
@@ -24,6 +26,7 @@ export default class Profile extends React.Component {
     })
   }
 
+  // render the user's profile data once it is received
   renderProfileCard() {
     if (this.state.name && this.state.picture_url) {
       return (

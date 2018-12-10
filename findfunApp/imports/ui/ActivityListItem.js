@@ -13,6 +13,7 @@ export default class ActivityListItem extends React.Component {
     this.bookmarksInsert = this.bookmarksInsert.bind(this);
   }
 
+  // bookmark and save activity in db for user
   bookmarksInsert() {
     if (this.props.activityListItem && this.props.city && this.props.time) {
       if (Meteor.userId()) {
@@ -45,8 +46,6 @@ export default class ActivityListItem extends React.Component {
 
   render() {
     if (this.props.activityListItem) {
-      // reference props to dislpay the desired information about business
-      // (have a look at console output to see what data exists)
       // console.log('activityListItem: ', this.props.activityListItem);
       return (
         <div className="card searchResult">
