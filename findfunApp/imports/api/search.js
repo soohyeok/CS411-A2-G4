@@ -3,37 +3,36 @@ import { HTTP } from 'meteor/http';
 import SimpleSchema from 'simpl-schema';
 
 Meteor.methods({
-  getWeatherResults(city) {
-    new SimpleSchema({
-      city: {
-        type: String
-      }
+  
+  getWeatherResults(city)
+  {
+      new SimpleSchema({
+        city:{
+          type: String
+        }
     }).validate({city});
 
     if (Meteor.isServer) {
-      const apikey = Meteor.settings.private.YAHOO_WEATHER_API_KEY;
-      const url = `https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22${city}%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys`;
-      // const options = {
-      //   params: {
-      //     location: city,
-      //     limit: 20
-      //   },
-      //   headers: {
-      //     Authorization: `Bearer ${apikey}`
-      //   },
-      //   timeout: 30000
-      // };
+      console.log("hahahaahaha");
+      const apikey = Meteor.settings.private.OPENWEATHER_API_KEY;
+      const url = `http://api.openweathermap.org/data/2.5/forecast`;
+      //const rest = "?q=" + city + ',us'
+      const options = {
+        params: {
+          q: city+',us',
+          APPID: apikey
+        },
+        timeout: 30000
+      };
       this.unblock();
       try {
         // Synchronous GET Request
-        const result = HTTP.get(url);
-        // console.log('getYelpData result: ', result);
+        const result = HTTP.get(url, options);
+         //console.log('getWeatherResults result: ', result.weather);
         if (result.statusCode === 200) {
           const responseJson = JSON.parse(result.content);
-          console.log('getWeatherResults responseJson:', responseJson.query.results.forecast);
-          const weatherForecast = responseJson.query.results.forecast;
-          const weatherForecastFiveDays = weatherForecast.splice(0,5);
-          return weatherForecastFiveDays;
+          console.log("responseJson", responseJson.list.splice(0,5));
+          return responseJson.list.splice(0,5);
         } else {
           // console.log("Response issue: ", result.statusCode);
           const errorJson = JSON.parse(result.content);
@@ -44,6 +43,8 @@ Meteor.methods({
       }
     }
   },
+  
+
   getYelpResults(city, time) {
     new SimpleSchema({
       city: {
