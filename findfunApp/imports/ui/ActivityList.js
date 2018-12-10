@@ -43,6 +43,7 @@ export default class ActivityList extends React.Component {
       <div className="column">
         <div className="box">
           <h3 className="title is-3 has-text-grey-dark">Activities</h3>
+          <h5 className="title is-5 has-text-grey-dark">Bookmark a fun activity for you and your friends</h5>
         </div>
         {this.renderActivityListItems()}
       </div>

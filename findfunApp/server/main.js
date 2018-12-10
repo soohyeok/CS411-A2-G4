@@ -1,7 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 
-import '../imports/api/search.js';
-import '../imports/api/users.js';
+import './search.js';
+import './users.js';
+
 import '../imports/api/bookmarks.js';
 
 import '../imports/startup/ServiceConfiguration.js';

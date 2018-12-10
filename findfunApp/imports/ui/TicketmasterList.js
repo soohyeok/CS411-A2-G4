@@ -42,7 +42,8 @@ export default class TicketmasterList extends React.Component {
     return (
       <div className="column">
         <div className="box">
-          <h3 className="title is-3 has-text-grey-dark">Entertainment</h3>
+          <h3 className="title is-3 has-text-grey-dark">Shows</h3>
+          <h5 className="title is-5 has-text-grey-dark">Bookmark a fun show for you and your friends</h5>
         </div>
         {this.renderTicketmasterListItems()}
       </div>

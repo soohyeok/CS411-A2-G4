@@ -37,7 +37,7 @@ export default class Profile extends React.Component {
             <div className="media-content">
               <div className="content">
                 <h2 className="title is-2 has-text-grey-dark">{this.state.name}</h2>
-                <h4 className="subtitle is-4 has-text-grey-dark">Browse your bookmarked activities and make plans for a fun time</h4>
+                <h4 className="subtitle is-4 has-text-grey-dark">Browse your bookmarks and make plans for a fun time</h4>
               </div>
             </div>
           </article>

@@ -43,6 +43,7 @@ export default class YelpList extends React.Component {
       <div className="column">
         <div className="box">
           <h3 className="title is-3 has-text-grey-dark">Food</h3>
+          <h5 className="title is-5 has-text-grey-dark">Bookmark a tasty restaurant to finish off your {this.props.time}</h5>
         </div>
         {this.renderYelpListItems()}
       </div>

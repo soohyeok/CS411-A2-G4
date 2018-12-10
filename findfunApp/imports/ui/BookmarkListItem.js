@@ -22,7 +22,7 @@ export default class BookmarkListItem extends React.Component {
     if (this.props.bookmarkListItem) {
       // reference props to dislpay the desired information about business
       // (have a look at console output to see what data exists)
-      console.log('bookmarkListItem: ', this.props.bookmarkListItem);
+      // console.log('bookmarkListItem: ', this.props.bookmarkListItem);
       return (
         <div className="card searchResult">
           <div className="card-image">

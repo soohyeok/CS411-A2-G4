@@ -6,6 +6,7 @@ import moment from 'moment';
 export const Bookmarks = new Mongo.Collection('bookmarks');
 
 if (Meteor.isServer) {
+  // publish saved bookmarks for logged in user using unique userId
   Meteor.publish('bookmarks', function () {
     if (this.userId) {
        return Bookmarks.find({userId: this.userId}, {fields: {}});
@@ -16,12 +17,14 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  // what data do we need/want
+  // insert new bookmark into db using logged in user unique userId
   bookmarksInsert(city, time, category, api_source, event_id, event_name, event_genre, event_url, event_image_url) {
+    // throw error if user is not logged in
     if (!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
 
+    // clean input from client
     new SimpleSchema({
       city: {
         type: String
@@ -62,35 +65,38 @@ Meteor.methods({
       event_image_url
     });
 
-    if (Meteor.isServer) {
-      const timestamp = moment().format();
+    const timestamp = moment().format();
 
-      Bookmarks.insert({
-        userId: this.userId,
-        created: timestamp,
-        city,
-        time,
-        category,
-        api_source,
-        event_id,
-        event_name,
-        event_genre,
-        event_url,
-        event_image_url
-      });
-    }
+    // insert new document into Bookmarks collection
+    Bookmarks.insert({
+      userId: this.userId,
+      created: timestamp,
+      city,
+      time,
+      category,
+      api_source,
+      event_id,
+      event_name,
+      event_genre,
+      event_url,
+      event_image_url
+    });
   },
+  // delete bookmark using bookmark's unique _id
   bookmarksRemove(_id) {
+    // throw error if user is not logged in
     if (!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
 
+    // clean input from client
     new SimpleSchema({
       _id: {
         type: String
       }
     }).validate({ _id });
 
+    // remove document
     Bookmarks.remove({ _id, userId: this.userId });
   }
 });

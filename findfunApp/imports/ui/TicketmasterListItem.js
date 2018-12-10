@@ -65,7 +65,7 @@ export default class TicketmasterListItem extends React.Component {
     if (this.props.ticketmasterListItem) {
       // reference props to dislpay the desired information about business
       // (have a look at console output to see what data exists)
-      console.log('ticketmasterListItem: ', this.props.ticketmasterListItem);
+      // console.log('ticketmasterListItem: ', this.props.ticketmasterListItem);
       return (
         <div className="card searchResult">
           <div className="card-image">
@@ -78,7 +78,7 @@ export default class TicketmasterListItem extends React.Component {
                 <span className="icon">
                   <i className="fas fa-bookmark"></i>
                 </span>
-                <span>Bookmark it!</span>
+                <span>{this.state.bookmarkSaved ? 'Bookmarked' : 'Bookmark it!'}</span>
               </a>
             </div>
             <h5 className="subtitle is-5 has-text-grey-dark">{this.props.ticketmasterListItem.classifications[0].genre.name}</h5>

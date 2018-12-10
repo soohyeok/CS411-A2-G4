@@ -47,7 +47,7 @@ export default class ActivityListItem extends React.Component {
     if (this.props.activityListItem) {
       // reference props to dislpay the desired information about business
       // (have a look at console output to see what data exists)
-      console.log('activityListItem: ', this.props.activityListItem);
+      // console.log('activityListItem: ', this.props.activityListItem);
       return (
         <div className="card searchResult">
           <div className="card-image">
@@ -62,7 +62,7 @@ export default class ActivityListItem extends React.Component {
                 <span className="icon">
                   <i className="fas fa-bookmark"></i>
                 </span>
-                <span>Bookmark it!</span>
+                <span>{this.state.bookmarkSaved ? 'Bookmarked' : 'Bookmark it!'}</span>
               </a>
             </div>
             <h5 className="subtitle is-5 has-text-grey-dark">{this.props.activityListItem.categories[0].title}</h5>
