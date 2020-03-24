@@ -4,9 +4,7 @@
 - MERN Stack Application
 
 ## Assignments
-- Assignment1_Proposal is located within 'docs' directory
-- Assignment2 Userstories are within a directory called 'User Stories' under 'docs' directory
-- Assignment3_Prototype is located within 'docs' directory 
+- All Assigned Reports are found in docs folder (Assignment#2 User Stories are located under docs/User Stories/
 
 ## How to Run app:  
 Clone repo and cd into folder and do the following:  
